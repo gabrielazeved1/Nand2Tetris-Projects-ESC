@@ -1,0 +1,91 @@
+Este manual focará em como você vai usar o Icarus Verilog e o GTKWave em seu dia a dia na 
+disciplina de Elementos de Sistemas Computacionais, partindo do pressuposto que o VS Code
+já está configurado com o plugin de Verilog e você sabe usá-lo para escrever e salvar seus códigos.
+
+
+Objetivo Geral do Fluxo de Trabalho:
+Seu objetivo será projetar um circuito digital (escrevendo seu código Verilog no VS Code), 
+simular seu comportamento (usando Icarus Verilog no Terminal) e, então, visualizar e analisar
+ os resultados dessa simulação (usando GTKWave).
+
+
+1. Escrevendo Seu Código Verilog (com VS Code)
+
+Ferramenta: VS Code (com o plugin "Verilog-HDL/SystemVerilog/Bluespec SystemVerilog" .
+O que fazer:
+    1.  Crie seu Módulo de Hardware (.v): Este é o seu design digital. Por exemplo, um somador,
+     um contador, um multiplexador. Salve-o com uma extensão `.v` (ex: `meu_contador.v`).
+    2.  Crie seu Testbench (.v): Este é um módulo Verilog separado que não será sintetizado para
+    hardware real, mas serve para "testar" seu módulo de hardware. Ele aplica entradas ao seu módulo
+    de design, gera um clock (se necessário) e instrui o simulador a registrar os sinais para
+    visualização. Salve-o também com `.v` (ex: `tb_meu_contador.v`).
+
+2. Compilando e Simulando Seu Design (com Icarus Verilog)
+
+* Ferramenta: Icarus Verilog (`iverilog` e `vvp`).
+* Onde usar: Terminal do macOS.
+* Passos:
+    1.  Navegue até a pasta do seu projeto:
+    2.  Compile seus arquivos Verilog:
+        Você precisa dizer ao Icarus Verilog quais arquivos ele deve processar e qual nome dará ao 
+        executável da simulação.
+        * Comando: `iverilog -o <nome_do_executavel> <seu_modulo_design.v> <seu_testbench.v>`
+        * Explicação:
+            * `iverilog`: O comando do compilador Icarus Verilog.
+            * `-o <nome_do_executavel>`: A opção `-o` define o nome do arquivo de saída. 
+            Este será o arquivo que você executará para simular. Ex: `sim` ou `meu_projeto_run`.
+            * `<seu_modulo_design.v>`: O nome do arquivo contendo o design do seu hardware.
+            * `<seu_testbench.v>`: O nome do arquivo contendo o testbench para o seu design.
+        * Exemplo Prático: Se você tem `meu_contador.v` e `tb_meu_contador.v` na sua pasta:
+            iverilog -o sim_contador meu_contador.v tb_meu_contador.v
+            Após executar, se não houver erros de sintaxe no seu Verilog, 
+            nenhum erro será exibido no terminal e um arquivo `sim_contador` 
+            (ou o nome que você escolheu) será criado na sua pasta.
+
+    3.  Execute a Simulação:
+        Agora, você vai rodar o executável que acabou de criar. Este passo irá de fato simular o
+        seu circuito e, se o seu testbench tiver as chamadas `$dumpfile` e `$dumpvars`, ele criará 
+        um arquivo `.vcd`.
+        * Comando: `vvp <nome_do_executavel>`
+        * Explicação:
+            * `vvp`: O simulador de baixo nível do Icarus Verilog.
+            * `<nome_do_executavel>`: O nome do arquivo gerado no passo anterior (ex: `sim_contador`).
+
+3. Visualizando as Formas de Onda (com GTKWave)
+
+* Ferramenta: GTKWave.
+* Onde usar: Terminal do macOS.
+* Passos:
+    1.  Abra o arquivo .vcd com GTKWave:
+        * Comando: `gtkwave <nome_do_arquivo.vcd>`
+        * Explicação:
+            * `gtkwave`: O comando para abrir o visualizador de formas de onda.
+            * `<nome_do_arquivo.vcd>`: O nome do arquivo gerado pela simulação do Icarus Verilog.
+        * Exemplo Prático: Se sua simulação gerou `simulacao.vcd`:
+            gtkwave simulacao.vcd
+            Uma nova janela do GTKWave será aberta.
+
+    2.  Explore os Sinais no GTKWave:
+        * Painel Esquerdo (SSC - Hierarchy): Você verá uma árvore de "scopes" (escopos).
+         Isso representa a hierarquia do seu design. Expanda o escopo do seu testbench 
+         (ex: `tb_meu_contador`).
+        * Painel Central Inferior (Signals): Arraste os sinais que você quer analisar 
+        (como `clk`, `saida`, `entrada`, etc.) do painel SSC (ou do painel de sinais recém-aberto)
+        para este painel.
+        * Painel Principal (Waveform): As formas de onda dos sinais selecionados aparecerão aqui. 
+        Você pode usar o zoom, mover-se no tempo e adicionar cursores para medir intervalos ou analisar
+         mudanças.
+        * Dica: Preste atenção nas bordas de clock e como as saídas mudam em relação às entradas,
+         conforme o comportamento que você espera do seu hardware. Isso é crucial para depuração.
+
+
+
+Resumo do Ciclo de Desenvolvimento:
+
+1.  Código (`.v`) no **VS Code**
+2.  Compilação (`iverilog`) no **Terminal**
+3.  Simulação (`vvp`) no **Terminal** (gera `.vcd`)
+4.  Visualização (`gtkwave`) no **Terminal** (abre o `.vcd`)
+5.  Análise e Depuração: Volte ao VS Code para corrigir seu código, se o 
+comportamento da simulação não for o esperado.
+
