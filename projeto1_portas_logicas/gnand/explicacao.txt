@@ -1,0 +1,29 @@
+gnand: Gate NAND de Duas Entradas - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta gnand no Terminal:
+   
+    cd ~/Documentos/ESC/projeto1_portas_logicas/gnand
+    
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_gnand.sh):
+    
+    chmod +x test_gnand.sh
+    
+
+3.  Rodar o Script de Teste:
+    
+    ./test_gnand.sh
+    
+
+4.  Analisar as Formas de Onda no GTKWave:
+    Observe as formas de onda e valide a tabela verdade da porta NAND:
+
+    Tabela Verdade da Porta NAND:
+    | input A | input B | output |
+    |---------|---------|--------|
+    | 0       | 0       | 1      |
+    | 0       | 1       | 1      |
+    | 1       | 0       | 1      |
+    | 1       | 1       | 0      |

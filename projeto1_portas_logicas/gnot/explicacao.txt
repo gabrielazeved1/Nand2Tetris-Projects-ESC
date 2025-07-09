@@ -1,0 +1,27 @@
+gnot: Gate NOT de Uma Entrada - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta gnot no Terminal:
+    cd ~/Documentos/ESC/projeto1_portas_logicas/gnot
+    
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_gnot.sh):
+   
+    chmod +x test_gnot.sh
+   
+
+3.  Rodar o Script de Teste:
+ 
+    ./test_gnot.sh
+   
+
+4.  Analisar as Formas de Onda no GTKWave:
+  
+    * Observe as formas de onda e valide a tabela verdade da porta NOT:
+
+    Tabela Verdade da Porta NOT:
+    | input A | output |
+    |---------|--------|
+    | 0       | 1      |
+    | 1       | 0      |

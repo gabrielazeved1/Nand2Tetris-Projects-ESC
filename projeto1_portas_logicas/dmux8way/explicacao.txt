@@ -1,0 +1,39 @@
+dmux8way: Demultiplexador de 8 Saídas de 1 Bit - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta dmux8way no Terminal:
+   
+    cd ~/Documentos/ESC/projeto1_portas_logicas/dmux8way
+   
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_dmux8way.sh):
+  
+    chmod +x test_dmux8way.sh
+  
+
+3.  Rodar o Script de Teste:
+   
+    ./test_dmux8way.sh
+    
+
+4.  Analisar as Formas de Onda no GTKWave:
+   
+    Observe as formas de onda. A entrada 'input_in' deve ser direcionada para a saída correspondente ao valor de 'input_sel'. Todas as outras saídas devem permanecer em 0.
+        Se 'input_sel' for `000`, 'output_a' deve ser igual a 'input_in', e as outras saídas 0.
+        Se 'input_sel' for `001`, 'output_b' deve ser igual a 'input_in', e as outras saídas 0.
+        ... e assim por diante até:
+        Se 'input_sel' for `111`, 'output_h' deve ser igual a 'input_in', e as outras saídas 0.
+
+    Tabela de Seleção (Conceitual):
+    | SEL (bin) | Input IN | Saída Ativa (Recebe IN) | Outras Saídas (Sempre 0) |
+    |-----------|----------|-------------------------|--------------------------|
+    | 000       | X        | A                       | B, C, D, E, F, G, H      |
+    | 001       | X        | B                       | A, C, D, E, F, G, H      |
+    | 010       | X        | C                       | A, B, D, E, F, G, H      |
+    | 011       | X        | D                       | A, B, C, E, F, G, H      |
+    | 100       | X        | E                       | A, B, C, D, F, G, H      |
+    | 101       | X        | F                       | A, B, C, D, E, G, H      |
+    | 110       | X        | G                       | A, B, C, D, E, F, H      |
+    | 111       | X        | H                       | A, B, C, D, E, F, G      |
+    (Onde X é o valor da entrada 'in' no momento da seleção.)

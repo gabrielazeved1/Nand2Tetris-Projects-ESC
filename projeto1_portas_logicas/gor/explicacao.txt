@@ -1,0 +1,30 @@
+gor: Gate OR de Duas Entradas - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta gor no Terminal:
+   
+    cd ~/Documentos/ESC/projeto1_portas_logicas/gor
+    
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_gor.sh):
+    
+    chmod +x test_gor.sh
+   
+
+3.  Rodar o Script de Teste:
+   
+    ./test_gor.sh
+    
+
+4.  Analisar as Formas de Onda no GTKWave:
+   
+    * Observe as formas de onda e valide a tabela verdade da porta OR:
+
+    Tabela Verdade da Porta OR:
+    | input A | input B | output |
+    |---------|---------|--------|
+    | 0       | 0       | 0      |
+    | 0       | 1       | 1      |
+    | 1       | 0       | 1      |
+    | 1       | 1       | 1      |

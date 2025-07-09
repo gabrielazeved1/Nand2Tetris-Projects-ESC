@@ -1,0 +1,36 @@
+mux: Multiplexador de Duas Entradas de 1 Bit - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta mux no Terminal:
+  
+    cd ~/Documentos/ESC/projeto1_portas_logicas/mux
+
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_mux.sh):
+
+    chmod +x test_mux.sh
+
+
+3.  Rodar o Script de Teste:
+  
+    ./test_mux.sh
+  
+
+4.  Analisar as Formas de Onda no GTKWave:
+
+    * Observe as formas de onda e valide a tabela verdade do Multiplexador:
+
+    Tabela Verdade do Multiplexador:
+    | SEL | Input A | Input B | Output |
+    |-----|---------|---------|--------|
+    | 0   | 0       | 0       | 0      |
+    | 0   | 0       | 1       | 0      |
+    | 0   | 1       | 0       | 1      |
+    | 0   | 1       | 1       | 1      |
+    | 1   | 0       | 0       | 0      |
+    | 1   | 0       | 1       | 1      |
+    | 1   | 1       | 0       | 0      |
+    | 1   | 1       | 1       | 1      |
+
+Obs.: Para ver melhor a forma de onda só aprtar zoom out no GTKWAVE

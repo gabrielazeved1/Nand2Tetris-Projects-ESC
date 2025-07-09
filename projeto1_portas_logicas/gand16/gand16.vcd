@@ -1,0 +1,60 @@
+$date
+	Sat Jul  5 13:30:44 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_gand16 $end
+$var wire 16 ! output_out [15:0] $end
+$var reg 16 " input_in1 [15:0] $end
+$var reg 16 # input_in2 [15:0] $end
+$scope module dut $end
+$var wire 16 $ in1 [15:0] $end
+$var wire 16 % in2 [15:0] $end
+$var wire 16 & out [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 &
+b0 %
+b0 $
+b0 #
+b0 "
+b0 !
+$end
+#100
+b1111111111111111 #
+b1111111111111111 %
+#200
+b0 #
+b0 %
+b1111111111111111 "
+b1111111111111111 $
+#300
+b1111111111111111 !
+b1111111111111111 &
+b1111111111111111 #
+b1111111111111111 %
+#400
+b11110000 !
+b11110000 &
+b111111110000 #
+b111111110000 %
+b1111000011110000 "
+b1111000011110000 $
+#500
+b1010101010101010 !
+b1010101010101010 &
+b1011101110111011 #
+b1011101110111011 %
+b1010101010101010 "
+b1010101010101010 $
+#600

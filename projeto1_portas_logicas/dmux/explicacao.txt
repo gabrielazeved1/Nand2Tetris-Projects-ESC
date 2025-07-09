@@ -1,0 +1,33 @@
+dmux: Demultiplexador de Duas Saídas de 1 Bit - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta dmux no Terminal:
+
+    cd ~/Documentos/ESC/projeto1_portas_logicas/dmux
+
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_dmux.sh):
+
+    chmod +x test_dmux.sh
+
+
+3.  Rodar o Script de Teste:
+   
+    ./test_dmux.sh
+    
+
+4.  Analisar as Formas de Onda no GTKWave:
+
+    * Observe as formas de onda. Você verá dois grandes blocos de tempo:
+        Primeiro Bloco (SEL=0): O sinal 'input_in' deve ser copiado para 'output_a', enquanto 'output_b' permanece 0.
+        Segundo Bloco (SEL=1): O sinal 'input_in' deve ser copiado para 'output_b', enquanto 'output_a' permanece 0.
+    * Valide a tabela verdade do Demultiplexador:
+
+    Tabela Verdade do Demultiplexador:
+    | SEL | Input IN | Output A | Output B |
+    |-----|----------|----------|----------|
+    | 0   | 0        | 0        | 0        |
+    | 0   | 1        | 1        | 0        |
+    | 1   | 0        | 0        | 0        |
+    | 1   | 1        | 0        | 1        |

@@ -1,0 +1,37 @@
+mux8way16: Multiplexador de 8 Entradas de 16 Bits - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta mux8way16 no Terminal:
+   
+    cd ~/Documentos/ESC/projeto1_portas_logicas/mux8way16
+    
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_mux8way16.sh):
+   
+    chmod +x test_mux8way16.sh
+    
+
+3.  Rodar o Script de Teste:
+    
+    ./test_mux8way16.sh
+    
+
+4.  Analisar as Formas de Onda no GTKWave:
+    Observe as formas de onda. A saída 'output_out' deve ser igual à entrada selecionada por 'input_sel'.
+        Se 'input_sel' for `000` (binário), 'output_out' deve ser igual a 'input_a'.
+        Se 'input_sel' for `001` (binário), 'output_out' deve ser igual a 'input_b'.
+        ... e assim por diante até:
+        Se 'input_sel' for `111` (binário), 'output_out' deve ser igual a 'input_h'.
+
+    Tabela de Seleção (Conceitual - Aplicada a cada bit):
+    | SEL (bin) | Saída (Out) é cópia de |
+    |-----------|------------------------|
+    | 000       | Input A                |
+    | 001       | Input B                |
+    | 010       | Input C                |
+    | 011       | Input D                |
+    | 100       | Input E                |
+    | 101       | Input F                |
+    | 110       | Input G                |
+    | 111       | Input H                |

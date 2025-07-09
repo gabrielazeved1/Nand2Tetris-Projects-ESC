@@ -1,0 +1,44 @@
+$date
+	Sat Jul  5 13:48:51 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_or8way $end
+$var wire 1 ! output_out $end
+$var reg 8 " input_in [7:0] $end
+$scope module dut $end
+$var wire 8 # in [7:0] $end
+$var wire 1 ! out $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 #
+b0 "
+0!
+$end
+#100
+1!
+b1 "
+b1 #
+#200
+b10000000 "
+b10000000 #
+#300
+b10101010 "
+b10101010 #
+#400
+b11111111 "
+b11111111 #
+#500
+b1111 "
+b1111 #
+#600

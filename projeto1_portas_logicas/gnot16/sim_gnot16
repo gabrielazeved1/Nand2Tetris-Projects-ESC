@@ -1,0 +1,62 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x13c706bd0 .scope module, "tb_gnot16" "tb_gnot16" 2 3;
+ .timescale -9 -12;
+v0x13c71c9a0_0 .var "input_in1", 15 0;
+v0x13c71ca50_0 .var "input_in2", 15 0;
+v0x13c71cb00_0 .net "output_out1", 15 0, L_0x13c71cc80;  1 drivers
+v0x13c71cbd0_0 .net "output_out2", 15 0, L_0x13c71cd70;  1 drivers
+S_0x13c706d40 .scope module, "dut" "gnot16" 2 11, 3 1 0, S_0x13c706bd0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 16 "in1";
+    .port_info 1 /INPUT 16 "in2";
+    .port_info 2 /OUTPUT 16 "out1";
+    .port_info 3 /OUTPUT 16 "out2";
+L_0x13c71cc80 .functor NOT 16, v0x13c71c9a0_0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+L_0x13c71cd70 .functor NOT 16, v0x13c71ca50_0, C4<0000000000000000>, C4<0000000000000000>, C4<0000000000000000>;
+v0x13c70af30_0 .net "in1", 15 0, v0x13c71c9a0_0;  1 drivers
+v0x13c71c720_0 .net "in2", 15 0, v0x13c71ca50_0;  1 drivers
+v0x13c71c7d0_0 .net "out1", 15 0, L_0x13c71cc80;  alias, 1 drivers
+v0x13c71c890_0 .net "out2", 15 0, L_0x13c71cd70;  alias, 1 drivers
+    .scope S_0x13c706bd0;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "gnot16.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x13c706bd0 {0 0 0};
+    %vpi_call 2 25 "$display", "Time | In1 (hex) | In2 (hex) | Out1 (hex) | Out2 (hex)" {0 0 0};
+    %vpi_call 2 27 "$monitor", "%0t | %h | %h | %h | %h", $time, v0x13c71c9a0_0, v0x13c71ca50_0, v0x13c71cb00_0, v0x13c71cbd0_0 {0 0 0};
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x13c71c9a0_0, 0, 16;
+    %pushi/vec4 0, 0, 16;
+    %store/vec4 v0x13c71ca50_0, 0, 16;
+    %delay 100, 0;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x13c71c9a0_0, 0, 16;
+    %pushi/vec4 65535, 0, 16;
+    %store/vec4 v0x13c71ca50_0, 0, 16;
+    %delay 100, 0;
+    %pushi/vec4 43690, 0, 16;
+    %store/vec4 v0x13c71c9a0_0, 0, 16;
+    %pushi/vec4 21845, 0, 16;
+    %store/vec4 v0x13c71ca50_0, 0, 16;
+    %delay 100, 0;
+    %pushi/vec4 61455, 0, 16;
+    %store/vec4 v0x13c71c9a0_0, 0, 16;
+    %pushi/vec4 4660, 0, 16;
+    %store/vec4 v0x13c71ca50_0, 0, 16;
+    %delay 100, 0;
+    %vpi_call 2 51 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_gnot16.v";
+    "gnot16.v";

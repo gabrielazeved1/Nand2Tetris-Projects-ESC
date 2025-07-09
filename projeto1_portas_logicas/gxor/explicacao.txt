@@ -1,0 +1,29 @@
+gxor: Gate XOR de Duas Entradas - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta gxor no Terminal:
+
+    cd ~/Documentos/ESC/projeto1_portas_logicas/gxor
+ 
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_gxor.sh):
+ 
+    chmod +x test_gxor.sh
+
+
+3.  Rodar o Script de Teste:
+
+    ./test_gxor.sh
+
+
+4.  Analisar as Formas de Onda no GTKWave:
+    * Observe as formas de onda e valide a tabela verdade da porta XOR:
+
+    Tabela Verdade da Porta XOR:
+    | input A | input B | output |
+    |---------|---------|--------|
+    | 0       | 0       | 0      |
+    | 0       | 1       | 1      |
+    | 1       | 0       | 1      |
+    | 1       | 1       | 0      |

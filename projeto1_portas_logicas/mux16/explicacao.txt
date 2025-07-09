@@ -1,0 +1,31 @@
+mux16: Multiplexador de Duas Entradas de 16 Bits - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta mux16 no Terminal:
+
+    cd ~/Documentos/ESC/projeto1_portas_logicas/mux16
+  
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_mux16.sh):
+  
+    chmod +x test_mux16.sh
+ 
+
+3.  Rodar o Script de Teste:
+    
+    ./test_mux16.sh
+  
+
+4.  Analisar as Formas de Onda no GTKWave:
+  
+    Observe as formas de onda.
+        Quando 'input_sel' é 0, 'output_out' deve ser uma cópia exata de 'input_a' (bit a bit).
+        Quando 'input_sel' é 1, 'output_out' deve ser uma cópia exata de 'input_b' (bit a bit).
+
+    Tabela Verdade (Conceitual - Aplicada a cada bit):
+    | SEL | Input A (bit) | Input B (bit) | Output (bit) |
+    |-----|---------------|---------------|--------------|
+    | 0   | X             | Y             | X            |
+    | 1   | X             | Y             | Y            |
+    (Onde X e Y representam o valor de um bit qualquer nas respectivas entradas de 16 bits.)

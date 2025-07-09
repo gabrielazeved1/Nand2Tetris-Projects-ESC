@@ -1,0 +1,108 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 12;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x1387075d0 .scope module, "tb_dmux4way" "tb_dmux4way" 2 3;
+ .timescale -9 -12;
+v0x138721b20_0 .var "input_in", 0 0;
+v0x138721bb0_0 .var "input_sel", 1 0;
+v0x138721c40_0 .net "output_a", 0 0, L_0x138722060;  1 drivers
+v0x138721cd0_0 .net "output_b", 0 0, L_0x1387222e0;  1 drivers
+v0x138721d80_0 .net "output_c", 0 0, L_0x1387225a0;  1 drivers
+v0x138721e50_0 .net "output_d", 0 0, L_0x138722820;  1 drivers
+S_0x138707740 .scope module, "dut" "dmux4way" 2 11, 3 1 0, S_0x1387075d0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "in";
+    .port_info 1 /INPUT 2 "sel";
+    .port_info 2 /OUTPUT 1 "a";
+    .port_info 3 /OUTPUT 1 "b";
+    .port_info 4 /OUTPUT 1 "c";
+    .port_info 5 /OUTPUT 1 "d";
+L_0x140078010 .functor BUFT 1, C4<00>, C4<0>, C4<0>, C4<0>;
+v0x13870f880_0 .net/2u *"_ivl_0", 1 0, L_0x140078010;  1 drivers
+v0x138720e20_0 .net *"_ivl_10", 0 0, L_0x138722200;  1 drivers
+L_0x1400780e8 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x138720ec0_0 .net/2u *"_ivl_12", 0 0, L_0x1400780e8;  1 drivers
+L_0x140078130 .functor BUFT 1, C4<10>, C4<0>, C4<0>, C4<0>;
+v0x138720f60_0 .net/2u *"_ivl_16", 1 0, L_0x140078130;  1 drivers
+v0x138721010_0 .net *"_ivl_18", 0 0, L_0x138722480;  1 drivers
+v0x1387210f0_0 .net *"_ivl_2", 0 0, L_0x138721f20;  1 drivers
+L_0x140078178 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x138721190_0 .net/2u *"_ivl_20", 0 0, L_0x140078178;  1 drivers
+L_0x1400781c0 .functor BUFT 1, C4<11>, C4<0>, C4<0>, C4<0>;
+v0x138721240_0 .net/2u *"_ivl_24", 1 0, L_0x1400781c0;  1 drivers
+v0x1387212f0_0 .net *"_ivl_26", 0 0, L_0x138722740;  1 drivers
+L_0x140078208 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x138721400_0 .net/2u *"_ivl_28", 0 0, L_0x140078208;  1 drivers
+L_0x140078058 .functor BUFT 1, C4<0>, C4<0>, C4<0>, C4<0>;
+v0x1387214a0_0 .net/2u *"_ivl_4", 0 0, L_0x140078058;  1 drivers
+L_0x1400780a0 .functor BUFT 1, C4<01>, C4<0>, C4<0>, C4<0>;
+v0x138721550_0 .net/2u *"_ivl_8", 1 0, L_0x1400780a0;  1 drivers
+v0x138721600_0 .net "a", 0 0, L_0x138722060;  alias, 1 drivers
+v0x1387216a0_0 .net "b", 0 0, L_0x1387222e0;  alias, 1 drivers
+v0x138721740_0 .net "c", 0 0, L_0x1387225a0;  alias, 1 drivers
+v0x1387217e0_0 .net "d", 0 0, L_0x138722820;  alias, 1 drivers
+v0x138721880_0 .net "in", 0 0, v0x138721b20_0;  1 drivers
+v0x138721a10_0 .net "sel", 1 0, v0x138721bb0_0;  1 drivers
+L_0x138721f20 .cmp/eq 2, v0x138721bb0_0, L_0x140078010;
+L_0x138722060 .functor MUXZ 1, L_0x140078058, v0x138721b20_0, L_0x138721f20, C4<>;
+L_0x138722200 .cmp/eq 2, v0x138721bb0_0, L_0x1400780a0;
+L_0x1387222e0 .functor MUXZ 1, L_0x1400780e8, v0x138721b20_0, L_0x138722200, C4<>;
+L_0x138722480 .cmp/eq 2, v0x138721bb0_0, L_0x140078130;
+L_0x1387225a0 .functor MUXZ 1, L_0x140078178, v0x138721b20_0, L_0x138722480, C4<>;
+L_0x138722740 .cmp/eq 2, v0x138721bb0_0, L_0x1400781c0;
+L_0x138722820 .functor MUXZ 1, L_0x140078208, v0x138721b20_0, L_0x138722740, C4<>;
+    .scope S_0x1387075d0;
+T_0 ;
+    %vpi_call 2 21 "$dumpfile", "dmux4way.vcd" {0 0 0};
+    %vpi_call 2 22 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x1387075d0 {0 0 0};
+    %vpi_call 2 24 "$display", "Time | IN | SEL (bin) | OUT_A | OUT_B | OUT_C | OUT_D" {0 0 0};
+    %vpi_call 2 25 "$monitor", "%0t | %b | %b | %b | %b | %b | %b", $time, v0x138721b20_0, v0x138721bb0_0, v0x138721c40_0, v0x138721cd0_0, v0x138721d80_0, v0x138721e50_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x138721b20_0, 0, 1;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 100, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x138721b20_0, 0, 1;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %delay 10000, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x138721b20_0, 0, 1;
+    %pushi/vec4 0, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %pushi/vec4 1, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %pushi/vec4 2, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %pushi/vec4 3, 0, 2;
+    %store/vec4 v0x138721bb0_0, 0, 2;
+    %delay 5000, 0;
+    %vpi_call 2 50 "$finish" {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "tb_dmux4way.v";
+    "dmux4way.v";

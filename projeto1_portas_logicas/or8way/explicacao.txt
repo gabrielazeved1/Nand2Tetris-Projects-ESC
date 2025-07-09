@@ -1,0 +1,28 @@
+or8way: Porta OR com 8 Entradas - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta or8way no Terminal:
+    
+    cd ~/Documentos/ESC/projeto1_portas_logicas/or8way
+   
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_or8way.sh):
+    
+    chmod +x test_or8way.sh
+  
+
+3.  Rodar o Script de Teste:
+    
+    ./test_or8way.sh
+ 
+
+4.  Analisar as Formas de Onda no GTKWave:
+    
+    Observe as formas de onda. A saída 'output_out' deve ser 1 se qualquer bit em 'input_in' for 1. A saída será 0 somente se todos os 8 bits de 'input_in' forem 0.
+
+    Tabela Verdade (Conceitual para Redução OR):
+    | Input IN (Bit Vector) | Output |
+    |-----------------------|--------|
+    | Todos os bits 0       | 0      |
+    | Pelo menos um bit 1   | 1      |

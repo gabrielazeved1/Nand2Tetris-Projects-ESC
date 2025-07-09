@@ -1,0 +1,35 @@
+dmux4way: Demultiplexador de 4 Saídas de 1 Bit - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta dmux4way no Terminal:
+ 
+    cd ~/Documentos/ESC/projeto1_portas_logicas/dmux4way
+    
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_dmux4way.sh):
+ 
+    chmod +x test_dmux4way.sh
+
+
+3.  Rodar o Script de Teste:
+  
+    ./test_dmux4way.sh
+   
+
+4.  Analisar as Formas de Onda no GTKWave:
+
+    Observe as formas de onda. A entrada 'input_in' deve ser direcionada para a saída correspondente ao valor de 'input_sel'. As outras saídas devem permanecer em 0.
+        Se 'input_sel' for `00`, 'output_a' deve ser igual a 'input_in', e 'output_b', 'output_c', 'output_d' devem ser 0.
+        Se 'input_sel' for `01`, 'output_b' deve ser igual a 'input_in', e 'output_a', 'output_c', 'output_d' devem ser 0.
+        Se 'input_sel' for `10`, 'output_c' deve ser igual a 'input_in', e 'output_a', 'output_b', 'output_d' devem ser 0.
+        Se 'input_sel' for `11`, 'output_d' deve ser igual a 'input_in', e 'output_a', 'output_b', 'output_c' devem ser 0.
+
+    Tabela de Seleção (Conceitual):
+    | SEL (bin) | Input IN | Output A | Output B | Output C | Output D |
+    |-----------|----------|----------|----------|----------|----------|
+    | 00        | X        | X        | 0        | 0        | 0        |
+    | 01        | X        | 0        | X        | 0        | 0        |
+    | 10        | X        | 0        | 0        | X        | 0        |
+    | 11        | X        | 0        | 0        | 0        | X        |
+    (Onde X é o valor da entrada 'in' no momento da seleção.)

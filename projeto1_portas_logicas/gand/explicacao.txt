@@ -1,0 +1,29 @@
+gand: Gate AND de Duas Entradas - Passo a Passo de Uso
+
+Instruções:
+
+1.  Acessar a Pasta gand no Terminal:
+    
+    cd ~/Documentos/ESC/projeto1_portas_logicas/gand
+    
+
+2.  Tornar o Script Executável (apenas na primeira vez para test_gand.sh):
+    
+    chmod +x test_gand.sh
+   
+
+3.  Rodar o Script de Teste:
+   
+    ./test_gand.sh
+    
+
+4.  Analisar as Formas de Onda no GTKWave:
+    Observe as formas de onda e valide a tabela verdade da porta AND:
+
+    Tabela Verdade da Porta AND:
+    | input A | input B | output |
+    |---------|---------|--------|
+    | 0       | 0       | 0      |
+    | 0       | 1       | 0      |
+    | 1       | 0       | 0      |
+    | 1       | 1       | 1      |
