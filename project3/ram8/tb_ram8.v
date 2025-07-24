@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module tb_ram8;
 
 reg clk;
@@ -26,23 +24,23 @@ initial begin
     load = 0; address = 3'b000; in = 16'h0000;
     #10;
 
-    load = 1; address = 3'b010; in = 16'habcd;  // Escreve na posição 2
+    load = 1; address = 3'b010; in = 16'habcd;  // escreve na posição 2
     #10;
     load = 0;
     #10;
 
-    address = 3'b010; // Lê da posição 2
+    address = 3'b010; // lê da posição 2
     #10;
 
-    load = 1; address = 3'b111; in = 16'h1234;  // Escreve na posição 7
+    load = 1; address = 3'b111; in = 16'h1234;  // escreve na posição 7
     #10;
     load = 0;
     #10;
 
-    address = 3'b111; // Lê da posição 7
+    address = 3'b111; // lê da posição 7
     #10;
 
-    address = 3'b000; // Lê da posição 0 (sem escrita)
+    address = 3'b000; // l da posição 0 (sem escrita)
     #10;
 
     $finish;

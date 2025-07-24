@@ -8,7 +8,7 @@
 
 ---
 
-# README - RAM4K (RAM com 4096 registros de 16 bits) [texto puro]
+# README - RAM4K (RAM com 4096 registros de 16 bits) 
 
 Arquivos na pasta:
 - ram4k.v       : Código da RAM4K simples e funcional.

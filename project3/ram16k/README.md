@@ -8,7 +8,7 @@
 
 ---
 
-# README - RAM16K (RAM com 16384 registros de 16 bits) [texto puro]
+# README - RAM16K (RAM com 16384 registros de 16 bits) 
 
 Arquivos na pasta:
 - ram16k.v       : Código da RAM16K simples e funcional.

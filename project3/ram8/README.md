@@ -8,7 +8,7 @@
 
 ---
 
-# README - RAM8 (RAM com 8 registros de 16 bits) [texto puro]
+# README - RAM8 (RAM com 8 registros de 16 bits) 
 
 Arquivos na pasta:
 - ram8.v       : Código da RAM8 simples e funcional.

@@ -1,6 +1,3 @@
-// tb_bit.v
-`timescale 1ns/1ps
-
 module tb_bit;
 
 reg clk;
@@ -8,7 +5,7 @@ reg load;
 reg in;
 wire out;
 
-bit uut (
+bit bit_inst (
     .clk(clk),
     .load(load),
     .in(in),

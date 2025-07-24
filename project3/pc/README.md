@@ -8,7 +8,7 @@
 
 ---
 
-# README - PC (Contador de Programa de 16 bits) [texto puro]
+# README - PC (Contador de Programa de 16 bits) 
 
 Arquivos na pasta:
 - pc.v         : Código do contador de programa.

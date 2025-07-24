@@ -8,7 +8,7 @@
 
 ---
 
-# README - DFF (Flip-Flop tipo D) [texto puro]
+# README - DFF (Flip-Flop tipo D) 
 
 Arquivos na pasta:
 - dff.v       : Código do Flip-Flop D.

@@ -8,7 +8,7 @@
 
 ---
 
-# README - REGISTER (Registrador de 16 bits) [texto puro]
+# README - REGISTER (Registrador de 16 bits) 
 
 Arquivos na pasta:
 - register.v : Código do registrador de 16 bits.

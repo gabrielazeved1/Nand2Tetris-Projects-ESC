@@ -8,7 +8,7 @@
 
 ---
 
-# README - BIT (Registrador de 1 bit) [texto puro]
+# README - BIT (Registrador de 1 bit) 
 
 Arquivos na pasta:
 - bit.v       : Código do registrador de 1 bit.

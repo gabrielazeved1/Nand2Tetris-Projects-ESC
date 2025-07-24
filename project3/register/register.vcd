@@ -1,0 +1,336 @@
+$date
+	Thu Jul 24 17:16:11 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_register $end
+$var wire 16 ! out [15:0] $end
+$var reg 1 " clk $end
+$var reg 16 # in [15:0] $end
+$var reg 1 $ load $end
+$scope module uut $end
+$var wire 1 " clk $end
+$var wire 16 % in [15:0] $end
+$var wire 1 $ load $end
+$var wire 16 & out [15:0] $end
+$scope begin bits[0] $end
+$var parameter 2 ' i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 ( in $end
+$var wire 1 $ load $end
+$var reg 1 ) out $end
+$upscope $end
+$upscope $end
+$scope begin bits[1] $end
+$var parameter 2 * i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 + in $end
+$var wire 1 $ load $end
+$var reg 1 , out $end
+$upscope $end
+$upscope $end
+$scope begin bits[2] $end
+$var parameter 3 - i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 . in $end
+$var wire 1 $ load $end
+$var reg 1 / out $end
+$upscope $end
+$upscope $end
+$scope begin bits[3] $end
+$var parameter 3 0 i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 1 in $end
+$var wire 1 $ load $end
+$var reg 1 2 out $end
+$upscope $end
+$upscope $end
+$scope begin bits[4] $end
+$var parameter 4 3 i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 4 in $end
+$var wire 1 $ load $end
+$var reg 1 5 out $end
+$upscope $end
+$upscope $end
+$scope begin bits[5] $end
+$var parameter 4 6 i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 7 in $end
+$var wire 1 $ load $end
+$var reg 1 8 out $end
+$upscope $end
+$upscope $end
+$scope begin bits[6] $end
+$var parameter 4 9 i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 : in $end
+$var wire 1 $ load $end
+$var reg 1 ; out $end
+$upscope $end
+$upscope $end
+$scope begin bits[7] $end
+$var parameter 4 < i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 = in $end
+$var wire 1 $ load $end
+$var reg 1 > out $end
+$upscope $end
+$upscope $end
+$scope begin bits[8] $end
+$var parameter 5 ? i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 @ in $end
+$var wire 1 $ load $end
+$var reg 1 A out $end
+$upscope $end
+$upscope $end
+$scope begin bits[9] $end
+$var parameter 5 B i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 C in $end
+$var wire 1 $ load $end
+$var reg 1 D out $end
+$upscope $end
+$upscope $end
+$scope begin bits[10] $end
+$var parameter 5 E i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 F in $end
+$var wire 1 $ load $end
+$var reg 1 G out $end
+$upscope $end
+$upscope $end
+$scope begin bits[11] $end
+$var parameter 5 H i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 I in $end
+$var wire 1 $ load $end
+$var reg 1 J out $end
+$upscope $end
+$upscope $end
+$scope begin bits[12] $end
+$var parameter 5 K i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 L in $end
+$var wire 1 $ load $end
+$var reg 1 M out $end
+$upscope $end
+$upscope $end
+$scope begin bits[13] $end
+$var parameter 5 N i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 O in $end
+$var wire 1 $ load $end
+$var reg 1 P out $end
+$upscope $end
+$upscope $end
+$scope begin bits[14] $end
+$var parameter 5 Q i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 R in $end
+$var wire 1 $ load $end
+$var reg 1 S out $end
+$upscope $end
+$upscope $end
+$scope begin bits[15] $end
+$var parameter 5 T i $end
+$scope module bit_inst $end
+$var wire 1 " clk $end
+$var wire 1 U in $end
+$var wire 1 $ load $end
+$var reg 1 V out $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1111 T
+b1110 Q
+b1101 N
+b1100 K
+b1011 H
+b1010 E
+b1001 B
+b1000 ?
+b111 <
+b110 9
+b101 6
+b100 3
+b11 0
+b10 -
+b1 *
+b0 '
+$end
+#0
+$dumpvars
+0V
+0U
+0S
+0R
+0P
+0O
+0M
+0L
+0J
+0I
+0G
+0F
+0D
+0C
+0A
+0@
+0>
+0=
+0;
+0:
+08
+07
+05
+04
+02
+01
+0/
+0.
+0,
+0+
+0)
+0(
+b0 &
+b0 %
+0$
+b0 #
+0"
+b0 !
+$end
+#5
+1"
+#10
+1+
+11
+17
+1=
+1C
+1I
+1O
+1U
+0"
+b1010101010101010 #
+b1010101010101010 %
+1$
+#15
+1V
+1P
+1J
+1D
+1>
+18
+12
+b1010101010101010 !
+b1010101010101010 &
+1,
+1"
+#20
+0"
+0$
+#25
+1"
+#30
+1(
+0+
+1.
+01
+14
+07
+1:
+0=
+1@
+0C
+1F
+0I
+1L
+0O
+1R
+0U
+0"
+b101010101010101 #
+b101010101010101 %
+1$
+#35
+0V
+1S
+0P
+1M
+0J
+1G
+0D
+1A
+0>
+1;
+08
+15
+02
+1/
+0,
+b101010101010101 !
+b101010101010101 &
+1)
+1"
+#40
+0"
+0$
+#45
+1"
+#50
+1+
+11
+17
+1=
+1C
+1I
+1O
+1U
+0"
+b1111111111111111 #
+b1111111111111111 %
+1$
+#55
+1V
+1P
+1J
+1D
+1>
+18
+12
+b1111111111111111 !
+b1111111111111111 &
+1,
+1"
+#60
+0"
+0$
+#65
+1"
+#70
+0"

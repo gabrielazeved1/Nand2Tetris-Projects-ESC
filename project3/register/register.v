@@ -1,4 +1,4 @@
-// register.v
+
 module register (
     input wire clk,
     input wire load,

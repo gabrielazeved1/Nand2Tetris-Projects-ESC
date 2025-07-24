@@ -1,5 +1,3 @@
-`timescale 1ns / 1ps
-
 module tb_ram4k;
 
 reg clk;

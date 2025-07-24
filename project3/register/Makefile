@@ -1,18 +1,33 @@
+# Makefile para o módulo register
+
+# Compilador
 IVERILOG = iverilog
 VVP = vvp
-VFLAGS = -Wall
+GTKWAVE = gtkwave
 
-COMPONENT = register
-TESTBENCH = tb_register.v
+# Arquivos
+TB = tb_register.v
+REGISTER = register.v
+BIT = ../bit/bit.v
+
+# Output da simulação
 OUT = register.out
+VCD = register.vcd
 
-all: run
+# Regra padrão para compilar e simular
+all: compile run view
 
 compile:
-	$(IVERILOG) $(VFLAGS) -o $(OUT) $(TESTBENCH) $(COMPONENT).v bit/bit.v
+	$(IVERILOG) -Wall -o $(OUT) $(TB) $(REGISTER) $(BIT)
 
-run: compile
+run:
 	$(VVP) $(OUT)
 
+view:
+	$(GTKWAVE) $(VCD)
+
+# Limpar arquivos gerados
 clean:
-	rm -f *.out
+	rm -f $(OUT) $(VCD)
+
+.PHONY: all compile run view clean

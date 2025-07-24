@@ -1,6 +1,3 @@
-// tb_dff.v
-`timescale 1ns/1ps
-
 module tb_dff;
 
 reg clk;
@@ -8,7 +5,7 @@ reg reset;
 reg d;
 wire q;
 
-// Instancia o DFF
+// instancia o DFF
 dff uut (
     .clk(clk),
     .reset(reset),
@@ -16,7 +13,7 @@ dff uut (
     .q(q)
 );
 
-// Clock 10ns período
+// clock 10ns período
 initial clk = 0;
 always #5 clk = ~clk;
 
@@ -24,15 +21,15 @@ initial begin
     $dumpfile("dff.vcd");
     $dumpvars(0, tb_dff);
 
-    // Inicializa sinais
+    // inicializa sinais
     reset = 1;
     d = 0;
 
-    // Testa reset ativo
+    // testa reset ativo
     #10;
     reset = 0;
 
-    // Testa entrada D
+    // testa DFF com diferentes valores de D
     d = 1;
     #10;
     d = 0;
@@ -40,12 +37,12 @@ initial begin
     d = 1;
     #10;
 
-    // Testa reset novamente
+    // testa reset ativo novamente
     reset = 1;
     #10;
     reset = 0;
 
-    // Testa troca rápida de D
+    
     d = 0;
     #7;
     d = 1;

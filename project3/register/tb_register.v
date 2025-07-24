@@ -1,6 +1,3 @@
-// tb_register.v
-`timescale 1ns/1ps
-
 module tb_register;
 
 reg clk;

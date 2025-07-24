@@ -43,7 +43,7 @@ Cada pasta possui:
 
 1. Acesse a pasta desejada, por exemplo:
 ```bash
-cd ram8
+cd nome_pasta
 ```
 
 2. Compile e rode a simulação com
@@ -55,7 +55,7 @@ make
 
 4. Visualize os sinais digitais no tempo usando o GTKWave:
 ```bash
-gtkwave ram8.vcd
+gtkwave nome_arquivo.vcd
 ```
 
 ---

@@ -8,7 +8,7 @@
 
 ---
 
-# README - RAM64 (RAM com 64 registros de 16 bits) [texto puro]
+# README - RAM64 (RAM com 64 registros de 16 bits) 
 
 Arquivos na pasta:
 - ram64.v       : Código da RAM64 simples e funcional.

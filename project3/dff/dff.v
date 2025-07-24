@@ -1,4 +1,3 @@
-// dff.v
 module dff (
     input wire clk,
     input wire reset,

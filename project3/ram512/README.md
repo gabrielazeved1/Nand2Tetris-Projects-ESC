@@ -8,7 +8,7 @@
 
 ---
 
-# README - RAM512 (RAM com 512 registros de 16 bits) [texto puro]
+# README - RAM512 (RAM com 512 registros de 16 bits) 
 
 Arquivos na pasta:
 - ram512.v       : Código da RAM512 simples e funcional.
