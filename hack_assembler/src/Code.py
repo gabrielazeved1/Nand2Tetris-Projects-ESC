@@ -26,7 +26,7 @@ class Code:
     @staticmethod
     def dest(mnemonic):
         return Code._dest_table.get(mnemonic, '000')
-
+# erro corrigido do mnemonic 
     @staticmethod
     def comp(mnemonic):
         if mnemonic in Code._comp_table:

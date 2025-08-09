@@ -5,7 +5,7 @@ from Code import Code
 from SymbolTable import SymbolTable
 
 class Assembler:
-    # Orquestra o processo de montagem da linguagem Hack Assembly para o binário Hack.
+    # orquestra o processo de montagem da linguagem Hack Assembly para o binário bin.
     def __init__(self, input_file):
         if not os.path.exists(input_file):
             raise FileNotFoundError(f"Erro: ficheiro de origem não encontrado: {input_file}")
@@ -15,7 +15,6 @@ class Assembler:
         self.symbol_table = SymbolTable()
 
     def first_pass(self):
-        # Primeira passagem: identificar rótulos
         parser = Parser(self.input_file)
         rom_address = 0
         while parser.has_more_commands():
@@ -29,7 +28,6 @@ class Assembler:
                 rom_address += 1
     
     def second_pass(self):
-        # Segunda passagem: traduzir instruções para binário
         parser = Parser(self.input_file)
         with open(self.output_file, 'w') as out_f:
             ram_address = 16
@@ -65,7 +63,7 @@ class Assembler:
 
                     binary_code = '111' + comp_bin + dest_bin + jmp_bin
                     out_f.write(binary_code + '\n')
-
+# comentarios para ficar mais facil testar... depois preciso apagar
     def assemble(self):
         print(f"Iniciando a montagem do ficheiro: {self.input_file}")
         try:
