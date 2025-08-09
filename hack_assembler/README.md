@@ -46,7 +46,7 @@ hack_assembler/
 ### **1. Makefile**
 Arquivo para automatizar a montagem dos programas `.asm`:
 - Comando `make` → monta todos os arquivos `.asm` da pasta `test_programs`.
-- Comando `make clean` → remove os `.hack` gerados.
+- Comando `make clean` → remove os `.bin` gerados.
 
 ---
 
@@ -58,7 +58,7 @@ Arquivo principal.
 Funções:
 1. **first_pass()** → percorre o código e registra labels na `SymbolTable`.
 2. **second_pass()** → traduz cada instrução para binário usando `Parser` e `Code`.
-3. Gera o arquivo `.hack` final.
+3. Gera o arquivo `.bin` final.
 
 ---
 
@@ -94,7 +94,7 @@ Contém arquivos `.asm` de exemplo para validar o Assembler.
 - **Rect.asm** → Desenha um retângulo/linha vertical na tela usando `R0` como altura.
 - **Pong.asm** → Jogo simples de Pong (versão em Assembly Hack).
 
-Cada `.asm` é convertido em um `.hack` equivalente, pronto para ser executado no **CPU Emulator**.
+Cada `.asm` é convertido em um `.bin` equivalente, pronto para ser executado no **CPU Emulator**.
 
 ---
 
@@ -106,8 +106,8 @@ Cada `.asm` é convertido em um `.hack` equivalente, pronto para ser executado n
    - Labels são adicionados na `SymbolTable` com seu endereço.
 3. **Passo 2 (Second Pass)**:
    - Cada instrução é traduzida para binário (16 bits).
-   - O binário é salvo no arquivo `.hack`.
-4. **Saída**: arquivo `.hack` executável no CPU Emulator.
+   - O binário é salvo no arquivo `.bin`.
+4. **Saída**: arquivo `.bin` executável no CPU Emulator.
 
 ---
 
@@ -115,7 +115,7 @@ Cada `.asm` é convertido em um `.hack` equivalente, pronto para ser executado n
 
 ```bash
 make       # Monta todos os arquivos .asm
-make clean # Remove todos os .hack gerados
+make clean # Remove todos os .bin gerados
 ```
 * Para montar um arquivo específico manualmente:*
 ```
@@ -138,7 +138,7 @@ python3 src/Assembler.py caminho/para/arquivo.asm
 ##  Como Testar no CPU Emulator
 
 1. Abra o **CPU Emulator** do nand2tetris.
-2. Vá em **File → Load Program** e selecione um `.hack` gerado.
+2. Vá em **File → Load Program** e selecione um `.bin` gerado.
 3. Clique em **Run** ou **Single Step** para ver a execução.
 4. Se for gráfico, vá em **View → Screen** para visualizar a saída.
 
