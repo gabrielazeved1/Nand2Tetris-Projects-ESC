@@ -6,9 +6,9 @@
     @R2
     M=D         // A = R2
     @END        
-    D;JGT       // Se R0 > R1, pula para END
+    D;JGT       // se R0 > R1, pula para END
     
-    // Se R1 >= R0, R1 e o maximo.
+    // se R1 >= R0, R1 e o maximo.
     @R1
     D=M         // D = RAM[1]
     @R2
